@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-sm">
+    <ul style="margin-left: 5px;">
+        <a (click)="logout()" style="cursor: pointer; right: 0;" class="btn-get-started scrollto"
+            routerLinkActive="active">Logout</a>
+    </ul>
+</nav>
+
+
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+            </div>
+            <div class="panel-body">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <td>ID</td>
+                            <td>Tipo</td>
+                            <td>Corsi</td>
+                            <td>Titolo</td>
+                            <td>Difficolta</td>
+                            <td>Tempo</td>
+                            <td>Testo</td>
+                            <td>GrigliaValutazione</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let row of data">
+                            <td>{{row.ID}}</td>
+                            <td>{{row.tipo}}</td>
+                            <td>{{row.corsi}}</td>
+                            <td>{{row.titolo}}</td>
+                            <td>{{row.difficolta}}</td>
+                            <td>{{row.tempo}}</td>
+                            <td>
+                               <!--<a href="{{row.testo}}" class="btn btn-warning btn-download btn-sm">&darr;</a>-->
+                            </td>
+                            <td>
+                               <!---<a href="{{row.griglia}}" class="btn btn-warning btn-download btn-sm">&darr;</a>-->
+                            </td>
+        
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

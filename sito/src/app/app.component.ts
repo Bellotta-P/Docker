@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'sito';
+  title = 'khaled';
+
+  constructor(private router: Router) {}
+  
+  logout() {
+    // Clear session data
+    localStorage.removeItem('user');
+
+    // Redirect to login page
+    this.router.navigate(['/login']);
+  }
+
+  redirect(){
+    this.router.navigate(['/login']);
+}
 }
