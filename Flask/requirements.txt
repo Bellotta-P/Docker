@@ -1,0 +1,9 @@
+flask
+flask-MySQLdb
+pymongo
+flask_cors
+flask_restful
+pyodbc
+pandas
+pymssql
+psycopg2
